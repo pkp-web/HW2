@@ -11,7 +11,7 @@ document.getElementById("dob").setAttribute("max", maxDate);
 document.getElementById("dob").setAttribute("min", minDate);
 
 
-// Slider - unchanged
+// Slider
 function updateHealth(value) {
     document.getElementById("healthValue").textContent = value;
 }
@@ -75,7 +75,7 @@ function reviewForm() {
     let userid = document.getElementById("userid").value;
     let health = document.getElementById("health").value;
 
-    // Allergies - unchanged
+    // Allergies
     let allergyList = [];
     if (document.getElementById("none").checked) {
         allergyList = ["None"];
@@ -108,7 +108,7 @@ function reviewForm() {
     let insuranceOk = insurance !== "";
     let useridOk = /^[A-Za-z][A-Za-z0-9_-]{4,29}$/.test(userid);
 
-    // Populate review - values
+    // Populate review
     document.getElementById("reviewName").innerHTML = fname + " " + (mi ? mi + " " : "") + lname;
     document.getElementById("reviewNameStatus").innerHTML = status(nameOk);
 
